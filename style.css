@@ -37,17 +37,6 @@ body {
     background: linear-gradient(#050505, #18181d);
 }
 
-.container .sidebar {
-    height: 100hv;
-    background-color: black;
-    padding: 20px 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 10000;
-    transition: all 0.6s ease;
-}
-
 /* Navbar stilleri */
 
 

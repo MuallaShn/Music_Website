@@ -1,0 +1,14 @@
+{
+  "name": "elektron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "mualla",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.6"
+  }
+}
