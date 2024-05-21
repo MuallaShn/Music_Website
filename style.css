@@ -1,0 +1,283 @@
+/* Google Fonts'dan font yükledik */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* Tüm HTML öğelerinde kullanabilmemizi sağlıyor. Varsayılan boşlukları ortadan kaldırdık */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Tüm bağlantıları beyaz ve altı çizili olmayacak şekilde gösterir 
+a {
+    text-decoration: none;
+    color: white;
+}
+*/
+/*Kullandığımız ikonları beyaz gösterir ve üzerinde gelindiğinde işaretçi gözükmesini sağlar */
+i {
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Sayfanın renk geçişine sahip olmasını sağlıyor. Sol üst köşeden başlayarak doğrusal geçişe neden olur */
+html,
+body {
+    height: 100vh;
+   background: linear-gradient(#050505, #18181d);
+  
+}
+
+/* Konteynerin genişliğini ve grid yapısını ayarladık */
+.container {
+    width: 100%;
+    display: grid;
+    background: linear-gradient(#050505, #18181d);
+}
+
+.container .sidebar {
+    height: 100hv;
+    background-color: black;
+    padding: 20px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10000;
+    transition: all 0.6s ease;
+}
+
+/* Navbar stilleri */
+
+
+.navbar-nav .nav-link {
+    color: #f8f9fa;
+    /* Linklerin rengini değiştirdik */
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(172, 7, 172);
+    /* Üzerine gelindiğinde linklerin rengini değiştirdik */
+}
+
+.dropdown-menu .dropdown-item i {
+    color: black;
+    padding-right: 10px;
+}
+
+
+.form-control {
+    background-color: black;
+    /* Arama kutusunun arka plan rengini değiştirdik */
+    color: #fff;
+    /* Arama kutusunun yazı rengini değiştirdik */
+}
+
+
+.navbar-brand {
+    color: #f8f9fa;
+}
+
+.navbar-brand:hover,
+.navbar-brand:hover i {
+    color: rgb(172, 7, 172);
+
+}
+
+.searchh {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding-left: 10px;
+}
+
+.searchh .form-control {
+    height: 30px;
+    /* Inputun yüksekliğini düşürdük */
+    line-height: 26px;
+    /* Yazı yüksekliğini inputun yüksekliğiyle uyumlu hale getirdik */
+}
+
+.container .trending {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: white;
+}
+
+.container .trending .left {
+    display: flex;
+    align-items: center;
+}
+
+.container .trending .left img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.container .trending .info h6 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+.container .trending .right .buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.container .trending .left .info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.container .trending .left .info .additional-info {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.container .trending .right .buttons button {
+    background-color: #5773ff;
+    border-radius: 14px;
+    font-size: small;
+    color: white;
+    width: 95px;
+    height: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container .trending .right i {
+    color: purple;
+    font-size: 20px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.container .genres {
+    padding: 10px 10px;
+   
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* Kartları dikey olarak hizalar */
+    align-items: flex-start;
+    /* Kartları sola yaslar */
+}
+
+.card-group {
+    display: flex;
+    flex-direction: row;
+   
+    /* Kart gruplarını yatay hizalar */
+
+}
+
+.genre-card {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    height: 110px;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 10px;
+    
+}
+
+.electro-pop {
+    background-color: #627a8d;
+}
+
+.dance-beat {
+    background-color: #b5a89a;
+}
+
+.clubhouse-remix {
+    background-color: #a05132;
+}
+
+.hip-hop-rap {
+    background-color: #0a4344;
+}
+
+.alternative-indie {
+    background-color: #b390ab;
+}
+
+.classical-period {
+    background-color: #665ca7;
+}
+
+.container .items .item{
+    color: white;
+   
+}
+
+.player{
+    padding: 10px;
+    padding-top: 30px;
+    color: white;
+    background-color: #18181d;
+}
+/* Audio kontrolünün genel stilini belirler */
+audio {
+    width: 100%; /* Kontrolün tam genişliği kaplamasını sağlar */
+    height: 30px; /* Kontrolün yüksekliğini belirler */
+    
+}
+
+/* Audio kontrol çubuğunun stilini belirler */
+audio::-webkit-media-controls-panel {
+    background-color:  #18181d; /* Arka plan rengini siyah yapar */
+    color: #fff; /* Yazı rengini beyaz yapar */
+}
+
+/* Play butonu ve diğer media kontrol ikonlarının stilini belirler */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-toggle-closed-captions-button,
+audio::-webkit-media-controls-fullscreen-button {
+    filter: brightness(0) invert(1); /* İkonları beyaz yapar */
+}
+
+/* Özelleştirilmiş ikonlar için genel stil */
+.audio-control {
+    font-size: 24px; /* İkon boyutunu belirler */
+    color: #000; /* İkon rengini siyah yapar */
+    cursor: pointer; /* İmleç işaretçi olur */
+}
+
+/* İkonlara tıklandığında veya üzerine gelindiğinde stil */
+
+.play-button {
+    background-color: #0f0f12;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.play-button i {
+    color: white;
+    font-size: 15px; /* İkonun boyutunu ayarlamak için */
+}
