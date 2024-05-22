@@ -9,18 +9,11 @@
     font-family: 'Roboto Slab', serif;
 }
 
-/* Tüm bağlantıları beyaz ve altı çizili olmayacak şekilde gösterir 
-a {
-    text-decoration: none;
-    color: white;
-}
-*/
 /*Kullandığımız ikonları beyaz gösterir ve üzerinde gelindiğinde işaretçi gözükmesini sağlar */
 i {
     color: white;
     cursor: pointer;
 }
-
 
 /* Sayfanın renk geçişine sahip olmasını sağlıyor. Sol üst köşeden başlayarak doğrusal geçişe neden olur */
 html,
@@ -37,59 +30,49 @@ body {
     background: linear-gradient(#050505, #18181d);
 }
 
+
 /* Navbar stilleri */
 
-
+/*Navbardaki yazıların rengini ayarladık*/
 .navbar-nav .nav-link {
     color: #f8f9fa;
-    /* Linklerin rengini değiştirdik */
+    
 }
 
+ /* Üzerine gelindiğinde linklerin rengini değiştirdik */
 .navbar-nav .nav-link:hover {
     color: rgb(172, 7, 172);
-    /* Üzerine gelindiğinde linklerin rengini değiştirdik */
+   
 }
-
+/*Dropdown menudeki yazının ve ikonun rengini ve paddingini ayarladık*/
 .dropdown-menu .dropdown-item i {
     color: black;
     padding-right: 10px;
 }
-
-
+ /* Arama kutusunun arka plan ve yazının rengini değiştirdik */
 .form-control {
-    background-color: black;
-    /* Arama kutusunun arka plan rengini değiştirdik */
+    background-color: black;  
     color: #fff;
-    /* Arama kutusunun yazı rengini değiştirdik */
 }
-
-
+/*Balfy yazısının varolan rengi*/
 .navbar-brand {
     color: #f8f9fa;
 }
-
-.navbar-brand:hover,
-.navbar-brand:hover i {
+/*Balfy yazısının üzerine gelindiğinde rengi değişiyor*/
+.navbar-brand:hover {
     color: rgb(172, 7, 172);
 
 }
-
+/*Search ikonunun inputa uzaklığını ayarladık*/
 .searchh {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: white;
     padding-left: 10px;
 }
-
+/*Inputun yüksekliğini düşürdük*/
 .searchh .form-control {
     height: 30px;
-    /* Inputun yüksekliğini düşürdük */
-    line-height: 26px;
-    /* Yazı yüksekliğini inputun yüksekliğiyle uyumlu hale getirdik */
 }
 
+/*Trending kısmının stilini ayarladık*/
 .container .trending {
     display: flex;
     align-items: center;
@@ -114,7 +97,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 .container .trending .right .buttons {
     display: flex;
     align-items: center;
@@ -134,9 +116,11 @@ body {
     align-items: center;
 }
 
+/*Trending kısmındaki listen now butonunun özellikleri*/
 .container .trending .right .buttons button {
     background-color: #5773ff;
     border-radius: 14px;
+    border: none;
     font-size: small;
     color: white;
     width: 95px;
@@ -144,7 +128,7 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
-
+/*Trending kısmındaki kalp ikonu*/
 .container .trending .right i {
     color: purple;
     font-size: 20px;
@@ -152,10 +136,9 @@ body {
     padding: 10px;
     border-radius: 50%;
 }
-
+/*Genre kartlarının bulunduğu alanın stilini ayarlıyoruz*/
 .container .genres {
-    padding: 10px 10px;
-   
+    padding: 10px 10px;  
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -164,14 +147,7 @@ body {
     /* Kartları sola yaslar */
 }
 
-.card-group {
-    display: flex;
-    flex-direction: row;
-   
-    /* Kart gruplarını yatay hizalar */
-
-}
-
+/*Genre cardın özelliklerini burada veriyoruz*/
 .genre-card {
     display: flex;
     align-items: center; 
@@ -185,7 +161,7 @@ body {
     border-radius: 10px;
     
 }
-
+/*Genre cardların rengini belirleme*/
 .electro-pop {
     background-color: #627a8d;
 }
@@ -210,17 +186,19 @@ body {
     background-color: #665ca7;
 }
 
+/*Playlistteki şarkıların yazı rengi*/
 .container .items .item{
     color: white;
    
 }
-
+/*En altta şarkı oynatma kısmının stilini belirliyoruz*/
 .player{
     padding: 10px;
     padding-top: 30px;
     color: white;
     background-color: #18181d;
 }
+
 /* Audio kontrolünün genel stilini belirler */
 audio {
     width: 100%; /* Kontrolün tam genişliği kaplamasını sağlar */
@@ -242,31 +220,18 @@ audio::-webkit-media-controls-time-remaining-display,
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-toggle-closed-captions-button,
 audio::-webkit-media-controls-fullscreen-button {
-    filter: brightness(0) invert(1); /* İkonları beyaz yapar */
+    filter: brightness(1) invert(1); /* İkonları beyaz yapar */
 }
 
-/* Özelleştirilmiş ikonlar için genel stil */
-.audio-control {
-    font-size: 24px; /* İkon boyutunu belirler */
-    color: #000; /* İkon rengini siyah yapar */
-    cursor: pointer; /* İmleç işaretçi olur */
-}
-
-/* İkonlara tıklandığında veya üzerine gelindiğinde stil */
-
+/* playlist kısmındaki oynatma ikonunun stilini belirliyoruz */
 .play-button {
     background-color: #0f0f12;
     border: none;
     color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
     border-radius: 5px;
+    font-size: 15px;
     cursor: pointer;
 }
 
-.play-button i {
-    color: white;
-    font-size: 15px; /* İkonun boyutunu ayarlamak için */
-}
