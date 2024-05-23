@@ -14,7 +14,7 @@ function createWindow() {
     });
 
     // index.html dosyasını yükle.
-    mainWindow.loadFile('index.html');
+    mainWindow.loadURL('http://127.0.0.1:81/');
 
     // Geliştirici Araçlarını aç.
     mainWindow.webContents.openDevTools();
