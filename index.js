@@ -14,7 +14,7 @@ function createWindow() {
     });
 
     // index.html dosyasını yükle.
-    mainWindow.loadFile('index.html');
+    mainWindow.loadURL('index.html');
 
     // Geliştirici Araçlarını aç.
     mainWindow.webContents.openDevTools();
