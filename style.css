@@ -40,10 +40,18 @@ body {
 }
 
  /* Üzerine gelindiğinde linklerin rengini değiştirdik */
-.navbar-nav .nav-link:hover {
-    color: rgb(172, 7, 172);
-   
+ .nav-link[href="music.html"]:hover {
+    color:  #C73072; /* Music link hover rengi */
 }
+.nav-link[href="live.html"]:hover {
+    color: #0D65D9; /* Live link hover rengi */
+}
+
+
+.nav-link[href="podcast.html"]:hover {
+    color:  #06604E; /* Podcast link hover rengi */
+}
+
 /*Dropdown menudeki yazının ve ikonun rengini ve paddingini ayarladık*/
 .dropdown-menu .dropdown-item i {
     color: black;
@@ -59,10 +67,12 @@ body {
     color: #f8f9fa;
 }
 /*Balfy yazısının üzerine gelindiğinde rengi değişiyor*/
+
 .navbar-brand:hover {
-    color: rgb(172, 7, 172);
+    color: rgb(253, 253, 253);
 
 }
+
 /*Search ikonunun inputa uzaklığını ayarladık*/
 .searchh {
     padding-left: 10px;
@@ -233,5 +243,134 @@ audio::-webkit-media-controls-fullscreen-button {
     border-radius: 5px;
     font-size: 15px;
     cursor: pointer;
+}
+/*Music Page*/
+.music_container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #C73072 15%,#18181d 50%, #18181d 40%);
+}
+.music_container h1{
+    color: white;
+    font-size: 60px;
+    padding: 50px;
+    padding-left: 120px;
+}
+.music_container h3{
+    color: white;
+    font-size: 28px;
+    padding: 30px;
+    padding-left: 120px;
+    
+
+}
+.music_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.music_pages {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /* Fotoğraflar arasındaki boşluk */
+    padding: 20px;
+}
+
+.music_pages img {
+    width: 150px; /* Fotoğrafların genişliği */
+    height: 150px; /* Fotoğrafların yüksekliği */
+    object-fit: cover; /* Fotoğrafların oranlarını koruyarak kırpmak */
+    border-radius: 10px; /* Köşeleri yuvarlatma */
+}
+/*Podcast Page*/
+.podcast_container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom,#06604e 15%,#18181d 50%, #18181d 40%);
+}
+.podcast_container h1{
+    color: white;
+    font-size: 60px;
+    padding: 50px;
+    padding-left: 120px;
+}
+.podcast_container h2{
+    color: white;
+    font-size: 28px;
+    padding: 30px;
+    padding-left: 120px;
+    
+
+}
+.podcast_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.podcast_pages {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /* Fotoğraflar arasındaki boşluk */
+    padding: 20px;
+}
+
+.podcast_pages img {
+    width: 150px; /* Fotoğrafların genişliği */
+    height: 150px; /* Fotoğrafların yüksekliği */
+    object-fit: cover; /* Fotoğrafların oranlarını koruyarak kırpmak */
+    border-radius: 10px; /* Köşeleri yuvarlatma */
+}
+/*Live Page*/
+.live_container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0D65D9 15%,#18181d 50%, #18181d 40%);
+}
+.live_container h1{
+    color: white;
+    font-size: 60px;
+    padding: 50px;
+    padding-left: 120px;
+}
+.live_container h2{
+    color: white;
+    font-size: 28px;
+    padding: 30px;
+    padding-left: 120px;
+    
+
+}
+.live_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.live_pages {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /* Fotoğraflar arasındaki boşluk */
+    padding: 20px;
+}
+
+.live_pages img {
+    width: 150px; /* Fotoğrafların genişliği */
+    height: 150px; /* Fotoğrafların yüksekliği */
+    object-fit: cover; /* Fotoğrafların oranlarını koruyarak kırpmak */
+    border-radius: 10px; /* Köşeleri yuvarlatma */
 }
 
