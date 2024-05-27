@@ -9,16 +9,17 @@
 </head>
 
 <body>
-     
+
     <!--Music sayfasının tasarımı-->
     <div class="music_container">
         <h1>Music</h1>
         <hr style="border-color: #612240; border-width: 2px;">
-        <h3>Discower new music</h3>
+        <h3>Discover new music</h3>
         <div class="music_pages">
 
-            <div class="music_item">
-                <!--Music sayfasına img eklendi-->
+             <!--Music sayfasına img eklendi-->
+            <div class="music_item">               
+                <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
                 <img src="{{ url_for('static', filename='assets/musicPage/todaysTopHits.jpg') }}"
                     alt="Today's Top Hits">
                 <p style="padding-top: 10px;">Today's Top Hits</p>
@@ -66,12 +67,7 @@
                 <p style="padding-top: 10px;">Daily Mix 5</p>
             </div>
         </div>
-
-
-
-
     </div>
-
 </body>
 
 </html>

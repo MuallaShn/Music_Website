@@ -299,19 +299,14 @@ audio::-webkit-media-controls-fullscreen-button {
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    /* Fotoğraflar arasındaki boşluk */
     padding: 20px;
 }
 
 .music_pages img {
     width: 150px;
-    /* Fotoğrafların genişliği */
     height: 150px;
-    /* Fotoğrafların yüksekliği */
     object-fit: cover;
-    /* Fotoğrafların oranlarını koruyarak kırpmak */
     border-radius: 10px;
-    /* Köşeleri yuvarlatma */
 }
 
 /*Podcast Page*/
@@ -351,19 +346,14 @@ audio::-webkit-media-controls-fullscreen-button {
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    /* Fotoğraflar arasındaki boşluk */
     padding: 20px;
 }
 
 .podcast_pages img {
     width: 150px;
-    /* Fotoğrafların genişliği */
     height: 150px;
-    /* Fotoğrafların yüksekliği */
     object-fit: cover;
-    /* Fotoğrafların oranlarını koruyarak kırpmak */
     border-radius: 10px;
-    /* Köşeleri yuvarlatma */
 }
 
 /*Live Page*/
@@ -387,7 +377,6 @@ audio::-webkit-media-controls-fullscreen-button {
     padding: 30px;
     padding-left: 120px;
 
-
 }
 
 .live_item {
@@ -402,18 +391,13 @@ audio::-webkit-media-controls-fullscreen-button {
     justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
-    /* Fotoğraflar arasındaki boşluk */
+    gap: 10px;/* Fotoğraflar arasındaki boşluk */   
     padding: 20px;
 }
 
 .live_pages img {
     width: 150px;
-    /* Fotoğrafların genişliği */
     height: 150px;
-    /* Fotoğrafların yüksekliği */
-    object-fit: cover;
-    /* Fotoğrafların oranlarını koruyarak kırpmak */
+    object-fit: cover;/* Fotoğrafların oranlarını koruyarak kırpmak */   
     border-radius: 10px;
-    /* Köşeleri yuvarlatma */
 }

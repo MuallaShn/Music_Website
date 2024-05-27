@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- HTML5 belgesi olduğunu belirtir-->
+<html lang="en"> <!-- HTML belgesinin dilini belirtir. -->
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- Belgenin karakter kodlamasını UTF-8 olarak belirtir-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Sayfanın mobil cihazlarda düzgün görüntülenmesi için görünüm penceresini ayarlar.-->
     <title>Music Player Platform</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Bootstrap CSS kütüphanesini sayfaya dahil eder.-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Boxicons ikon setini sayfaya dahil eder. -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!--Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
 </head>
 
 <!--Navbar kısmında bootstrap kullandım-->
@@ -32,7 +36,7 @@
                             <a class="nav-link" aria-current="page" href="music">Music</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"  href="live">Live</a>
+                            <a class="nav-link" href="live">Live</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="podcast">Podcast</a>
@@ -158,7 +162,10 @@
                         <!--bootstrap özelliklerini hazır alıp kullandık yatayda ve dikeyde ortada hizalar-->
                         <div class="item d-flex align-items-center">
                             <p style="padding: 10px; color: #919191;">01</p>
-                            <img src="{{ url_for('static', filename='assets/taylorSwift.jpg') }}" alt="Taylor Swift" style="width: 50px; height: 50px;">
+                            <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                            <img src="{{ url_for('static', filename='assets/taylorSwift.jpg') }}" alt="Taylor Swift"
+                                style="width: 50px; height: 50px;">
+
                             <div class="details ms-3" style="flex-grow: 1;">
                                 <h6 style="font-size: 0.8em;">Blank Space</h6>
                                 <p style="font-size: 0.7em; color: #919191">Taylor Swift</p>
@@ -168,13 +175,16 @@
                                     <i class='bx bxs-right-arrow'></i>
                                 </button>
                                 <i class='bx bxs-plus-square'></i>
-                                <audio id="audio-player" src="{{ url_for('static', filename='mp3/BlankSpace.mp3') }}"></audio>
+                                <audio id="audio-player"
+                                    src="{{ url_for('static', filename='mp3/BlankSpace.mp3') }}"></audio>
                             </div>
                         </div>
                         <!-- Harry Styles -->
                         <div class="item d-flex align-items-center">
                             <p style="padding: 10px; color: #919191;">02</p>
-                            <img src="{{ url_for('static', filename='assets/harryStylesjpg.jpg') }}" alt="Harry Styles" style="width: 50px; height: 50px;">
+                            <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                            <img src="{{ url_for('static', filename='assets/harryStylesjpg.jpg') }}" alt="Harry Styles"
+                                style="width: 50px; height: 50px;">
                             <div class="details ms-3" style="flex-grow: 1;">
                                 <h6 style="font-size: 0.8em;">As It Was</h6>
                                 <p style="font-size: 0.7em; color: #919191">Harry Styles</p>
@@ -184,13 +194,17 @@
                                     <i class='bx bxs-right-arrow'></i>
                                 </button>
                                 <i class='bx bxs-plus-square'></i>
-                                <audio id="audio-player" src="{{ url_for('static', filename='mp3/AsItWas.mp3') }}"></audio>
+                                <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                                <audio id="audio-player"
+                                    src="{{ url_for('static', filename='mp3/AsItWas.mp3') }}"></audio>
                             </div>
                         </div>
                         <!-- Selena Gomez -->
                         <div class="item d-flex align-items-center">
                             <p style="padding: 10px; color: #919191;">03</p>
-                            <img src="{{ url_for('static', filename='assets/selenaGomez.jpg') }}" alt="Selena Gomez" style="width: 50px; height: 50px;">
+                            <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                            <img src="{{ url_for('static', filename='assets/selenaGomez.jpg') }}" alt="Selena Gomez"
+                                style="width: 50px; height: 50px;">
                             <div class="details ms-3" style="flex-grow: 1;">
                                 <h6 style="font-size: 0.8em;">People You Know</h6>
                                 <p style="font-size: 0.7em; color: #919191">Selena Gomez</p>
@@ -200,13 +214,17 @@
                                     <i class='bx bxs-right-arrow'></i>
                                 </button>
                                 <i class='bx bxs-plus-square'></i>
-                                <audio id="audio-player" src="{{ url_for('static', filename='mp3/PeopleYouKnow.mp3') }}"></audio>
+                                <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                                <audio id="audio-player"
+                                    src="{{ url_for('static', filename='mp3/PeopleYouKnow.mp3') }}"></audio>
                             </div>
                         </div>
                         <!-- Çağan Şengül  -->
                         <div class="item d-flex align-items-center">
                             <p style="padding: 10px; color: #919191;">04</p>
-                            <img src="{{ url_for('static', filename='assets/caganSengul.jpg') }}" alt="Çağan Şengül" style="width: 50px; height: 50px;">
+                            <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                            <img src="{{ url_for('static', filename='assets/caganSengul.jpg') }}" alt="Çağan Şengül"
+                                style="width: 50px; height: 50px;">
                             <div class="details ms-3" style="flex-grow: 1;">
                                 <h6 style="font-size: 0.8em;">Yansın</h6>
                                 <p style="font-size: 0.7em; color: #919191">Çağan Şengül, Emre Aydın</p>
@@ -216,7 +234,9 @@
                                     <i class='bx bxs-right-arrow'></i>
                                 </button>
                                 <i class='bx bxs-plus-square'></i>
-                                <audio id="audio-player" src="{{ url_for('static', filename='mp3/Yansın.mp3') }}"></audio>
+                                <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                                <audio id="audio-player"
+                                    src="{{ url_for('static', filename='mp3/Yansın.mp3') }}"></audio>
                             </div>
                         </div>
                     </div>
@@ -230,11 +250,13 @@
                     </div>
                     <button type="button" class="btn btn-danger recommend-button">Show Recommendation</button>
 
-                    <div style="display: flex; justify-content: center; align-items: center; height: 100px; background: linear-gradient(#050505, #18181d); margin-top: 20px; overflow: auto; height: 220px; color: white;  ">
+                    <div
+                        style="display: flex; justify-content: center; align-items: center; height: 100px; background: linear-gradient(#050505, #18181d); margin-top: 20px; overflow: auto; height: 220px; color: white;  ">
                         <ul id="recommend-box" style="list-style-type: none; padding: 0; margin: 0;">
                             <div class="item d-flex align-items-center">
                                 <p style="padding: 10px; color: #919191;">04</p>
-                                <img src="{{ url_for('static', filename='assets/caganSengul.jpg') }}" alt="Çağan Şengül" style="width: 50px; height: 50px;">
+                                <img src="{{ url_for('static', filename='assets/caganSengul.jpg') }}" alt="Çağan Şengül"
+                                    style="width: 50px; height: 50px;">
                                 <div class="details ms-3" style="flex-grow: 1;">
                                     <h6 style="font-size: 0.8em;">Yansın</h6>
                                     <p style="font-size: 0.7em; color: #919191">Çağan Şengül, Emre Aydın</p>
@@ -244,20 +266,22 @@
                                         <i class='bx bxs-right-arrow'></i>
                                     </button>
                                     <i class='bx bxs-plus-square'></i>
-                                    <audio id="audio-player" src="{{ url_for('static', filename='mp3/Yansın.mp3') }}"></audio>
+                                    <audio id="audio-player"
+                                        src="{{ url_for('static', filename='mp3/Yansın.mp3') }}"></audio>
                                 </div>
                             </div>
-                            
-                        
+
+
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
             <!-- Sayfanın altındaki müziği oynatma kısmının özellikleri-->
             <div class="player">
                 <div class="item d-flex align-items-center">
-                    <img src="{{ url_for('static', filename='assets/lanaDelRey.jpg') }}" alt="Lana Del Rey" style="width: 83px; height: 83px;">
+                    <img src="{{ url_for('static', filename='assets/lanaDelRey.jpg') }}" alt="Lana Del Rey"
+                        style="width: 83px; height: 83px;">
                     <div class="details ms-3" style="flex-grow: 1;">
                         <div class="details ms-3 d-flex flex-column">
                             <h6 style="font-size: 0.8em;">Summertime Sadness</h6>
@@ -276,24 +300,23 @@
 
     <button class="hello-button">HELLO</button>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.play-button').forEach(button => {
-                button.addEventListener('click', function () {
-                    const audio = this.nextElementSibling.nextElementSibling;
+        document.addEventListener('DOMContentLoaded', () => { /*html belgesi tamamen yüklendiğinde çalışacak bir olay dinleyicisi tanımlar*/
+            document.querySelectorAll('.play-button').forEach(button => { /*play-button sınıfına sahip öğeyi seçer bu seçilen her bir öğe için bir döngü oluşturur.*/
+                button.addEventListener('click', function () {/*seçilen öğelere tıklama özelliğini ekler*/
+                    const audio = this.nextElementSibling.nextElementSibling; /*tıklanan düğmenin hemen sonraki iki kardeş öğesini seçer*/
 
-                    if (audio.paused) {
+                    if (audio.paused) { /*seçilen ses öğesinin durumunu kontrol eder. Eğer ses durmuşsa, yani çalmıyorsa, bir dizi işlem gerçekleştirilir.*/
                         audio.play();
-                        this.innerHTML = "<i class='bx bx-pause-circle icon-large'></i>";
+                        this.innerHTML = "<i class='bx bx-pause-circle icon-large'></i>"; /*tıklanan düğmenin içeriğini değiştirir. Eğer müzik çalmaya başlarsa, düğmenin içeriği "duraklat" simgesiyle değiştirilir.*/
                     } else {
                         audio.pause();
                         this.innerHTML = "<i class='bx bxs-right-arrow'></i>";
                     }
                 });
             });
-            
+
             const hellobutton = document.querySelector('.recommend-button')
-            hellobutton.addEventListener('click',function()
-            {
+            hellobutton.addEventListener('click', function () {
                 console.log('SENDIN')
 
                 const dataToSend = document.getElementById('suggestion-box').value
@@ -306,14 +329,14 @@
                     body: JSON.stringify(dataToSend)
                 })
 
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-                
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Success:', data);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+
                 //----------------------------------------------------------------------
                 fetch('/get_data', {
                     method: 'POST',
@@ -321,29 +344,29 @@
                         'Content-Type': 'application/json'
                     }
                 })
-                .then(response => response.json())
-                .then(data => {
-                    const recUL = document.getElementById('recommend-box');
-                    recUL.innerHTML = "";
-                    console.log(data[0]);
-                    data.forEach(function(element){
-                    const newElement = 
-                        "<div class='item d-flex align-items-center'> " + 
-                        "<img src='{{ url_for('static', filename='assets/nota.png') }}' alt='Çağan Şengül' style='width: 50px; height: 50px;'>" + 
-                        "<div class='details ms-3' style='flex-grow: 1;'>" + 
-                            "<h6 style='font-size: 0.8em;'>"+element+"</h6>" + 
-                            "<p style='font-size: 0.7em; color: #919191'>Singer</p>" +
-                        "</div>"
+                    .then(response => response.json())
+                    .then(data => {
+                        const recUL = document.getElementById('recommend-box');
+                        recUL.innerHTML = "";
+                        console.log(data[0]);
+                        data.forEach(function (element) {
+                            const newElement =
+                                "<div class='item d-flex align-items-center'> " +
+                                "<img src='{{ url_for('static', filename='assets/nota.png') }}' alt='Çağan Şengül' style='width: 50px; height: 50px;'>" +
+                                "<div class='details ms-3' style='flex-grow: 1;'>" +
+                                "<h6 style='font-size: 0.8em;'>" + element + "</h6>" +
+                                "<p style='font-size: 0.7em; color: #919191'>Singer</p>" +
+                                "</div>"
 
-                    recUL.innerHTML += newElement;
-                        });                 
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
+                            recUL.innerHTML += newElement;
+                        });
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
             });
 
-            })
+        })
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
