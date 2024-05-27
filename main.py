@@ -7,7 +7,7 @@ import subprocess
 reco_data = ""
 
 @app.route('/')
-def hello_world():
+def main():
     return render_template("index.html")
 
 @app.route('/send_data', methods=['POST'])
@@ -23,8 +23,30 @@ def send_data():
 @app.route('/get_data', methods=['POST'])
 def get_data():
     global reco_data
-    data_toget = recommend.recommendation(reco_data)
+    try:
+        data_toget = recommend.recommendation(reco_data)
+    except Exception as e:
+        data_toget = ["No Song :("]
     return jsonify(data_toget)
+
+
+
+
+@app.route('/music')
+def MusicPage():
+    return "Music"
+
+@app.route('/live')
+def LivePage():
+    return "Live Page"
+
+
+@app.route('/podcast')
+def PodcastPage():
+    return "Podcast Page"
+
+
+
 
 
 
