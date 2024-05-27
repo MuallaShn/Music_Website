@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Music page</title>
+</head>
+
+<body>
+    <!--Music sayfasının tasarımı-->
+    <div class="music_container">
+        <h1>Music</h1>
+        <hr style="border-color: #612240; border-width: 2px;">
+        <h3>Discower new music</h3>
+        <div class="music_pages">
+
+            <div class="music_item">
+                <!--Music sayfasına img eklendi-->
+                <img src="{{ url_for('static', filename='assets/musicPage/todaysTopHits.jpg') }}"
+                    alt="Today's Top Hits">
+                <p style="padding-top: 10px;">Today's Top Hits</p>
+            </div>
+            <div class="music_item">
+                <img src="{{ url_for('static', filename='assets/musicPage/discoverWeekly.jpg') }}"
+                    alt="Discover Weekly">
+                <p style="padding-top: 10px;">Discover Weekly</p>
+            </div>
+            <div class="music_item">
+                <img src="{{ url_for('static', filename='assets/musicPage/newMusicFriday.jpg') }}"
+                    alt="New Music Friday">
+                <p style="padding-top: 10px;">New Music Friday</p>
+            </div>
+            <div class="music_item">
+                <img src="{{ url_for('static', filename='assets/musicPage/yourTimeCapsule.jpg') }}"
+                    alt="Your Time Capsule">
+                <p style="padding-top: 10px;">Your Time Capsule</p>
+            </div>
+            <div class="music_item">
+                <img src="{{ url_for('static', filename='assets/musicPage/hotHitsTürkiye.jpg') }}"
+                    alt="Hot Hits Türkiye">
+                <p style="padding-top: 10px;">Hot Hits Türkiye</p>
+            </div>
+        </div>
+        <div class="music_pages">
+            <div class="music_item">
+                <img src="{{ url_for('static', filename='assets/musicPage/dailyMix1.jpg') }}" alt="Daily Mix 1">
+                <p style="padding-top: 10px;">Daily Mix 1</p>
+            </div>
+            <div class="music_item">
+                <img src="{{ url_for('static', filename='assets/musicPage/dailyMix2.jpg') }}" alt="Daily Mix 2">
+                <p style="padding-top: 10px;">Daily Mix 2</p>
+            </div>
+            <div class="music_item">
+                <img src="{{ url_for('static', filename='assets/musicPage/dailyMix3.jpg') }}" alt="Daily Mix 3">
+                <p style="padding-top: 10px;">Daily Mix 3</p>
+            </div>
+            <div class="music_item">
+                <img src="{{ url_for('static', filename='assets/musicPage/dailyMix4.jpg') }}" alt="Daily Mix 4">
+                <p style="padding-top: 10px;">Daily Mix 4</p>
+            </div>
+            <div class="music_item">
+                <img src="{{ url_for('static', filename='assets/musicPage/dailyMix5.jpg') }}" alt="Daily Mix 5">
+                <p style="padding-top: 10px;">Daily Mix 5</p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

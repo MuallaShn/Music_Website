@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<!--Navbar kısmında bootstrap kullandım-->
+
+<body>
+    <!--Container sınıfına css den özellikler ekledik bu da sayfanın genel özelliklerini barındırıyor-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary container">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="#"><i class='bx bxs-ghost' style="color: white; cursor: pointer;"></i>
+                    Balfy</a>
+                <!--Navbardaki butonlara stilini ve basma özelliğini aktardık-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--Navbardaki itemları gösterdik ve özellik ekledik -->
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="music">Music</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="live">Live</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="podcast">Podcast</a>
+                        </li>
+                        <!--Navbardaki dropdown menulere özellik ve ikonlar eklendi-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style=" color: #919191;" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu" style="background-color:  #88CFFD">
+                                <li><a class="dropdown-item" href="#"> <i class='bx bxs-bolt-circle'></i>Explore</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"> <i class='bx bxs-volume-full'></i>Genres</a></li>
+                                <li><a class="dropdown-item" href="#"><i class='bx bxs-album'></i>Albums</a></li>
+                                <li><a class="dropdown-item" href="#"> <i class='bx bxs-microphone'></i>Artists</a></li>
+                                <li><a class="dropdown-item" href="#"> <i class='bx bx-podcast'></i>Podcasts</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style=" color: #919191;" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Library
+                            </a>
+                            <ul class="dropdown-menu" style="background-color: #88CFFD">
+                                <li><a class="dropdown-item" href="#"> <i class='bx bx-undo'></i>Recent</a></li>
+                                <li><a class="dropdown-item" href="#"> <i class='bx bxs-album'></i></i>Albums</a></li>
+                                <li><a class="dropdown-item" href="#"> <i class='bx bxs-heart'></i></i>Favourites</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"> <i class='bx bxs-folder'></i>Local</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style=" color: #919191;" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Playlist
+                            </a>
+                            <ul class="dropdown-menu" style="background-color: #88CFFD">
+                                <li><a class="dropdown-item" href="#"> <i class='bx bxs-plus-square'></i>Create New</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"> <i class='bx bxs-caret-right-circle'></i>Best of
+                                        2023</a></li>
+                                <li><a class="dropdown-item" href="#"><i class='bx bxs-caret-right-circle'></i>Best of
+                                        2022</a></li>
+                                <li><a class="dropdown-item" href="#"> <i class='bx bxs-caret-right-circle'></i>Daily
+                                        Mix</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--formlardaki inputları kullanarak text girebileceğimiz kısım  -->
+                    <form class="searchh d-flex align-items-center" role="search"><!--cssden searchh sınıfını çağırıyoruz ve bootstrabin bazı özelliklerini
+                        kullanarak elemanları satır veya sütunda dikey ve ortada sıralanmasını sağlar  -->
+                        <i class='bx bx-search' style="padding-right: 10px;"></i>
+                        <!--Giriş türünü arama kutusu olarak belirler ve boş olduğu zaman metin görüntülenmesini sağlar ve ekran okuyucuların elemanın işlevini veya amacını doğru bir şekilde tanımlamasına yardımcı olur-->
+                        <input class="form-control me-2" type="search" placeholder="Type here to search"
+                            aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!--Trend şarkının bulunduğu kısıma cssden sınıfları ekleyip özelliklerini belirledik-->
+        <div class="trending">
+            <div class="left">
+                <img src="{{ url_for('static', filename='assets/theWeekend.jpg') }}" alt="The Weekend">
+                <div class="info">
+                    <h6>Trending New Song</h6>
+                    <h1>After Hours</h1>
+                    <div class="additional-info">
+                        <h6>The Weekend</h6>
+                        <h6 style=" color: #919191;">206 Million Plays</h6>
+                    </div>
+                </div>
+            </div>
+            <!--Trend classının içine button ve kalp ikonu koyduk ve bunları css ile özelleştirdik-->
+            <div class="right">
+                <div class="buttons">
+                    <button>Listen Now</button>
+                    <i class='bx bxs-heart'></i>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!--Bootstrap kullanarak genre kartları oluşturduk ve özelliklerini kullanarak kartları yatayda ve dikeyde hizalanacak şekilde ayarladık-->
+        <div class="container">
+            <div class="row">
+                <!-- Genre Kartları -->
+                <div class="col-md-4">
+                    <!--Genel bir genres sınıfı oluşturarak kartların bulunduğu ortamda hizalanmasını sağladık-->
+                    <div class="genres">
+                        <h6 style="color: white;">Genres </h6>
+                        <div class="row">
+                            <!--her bir sütunun orta boyutlu ekranlarda genişliğinin 4 kolon olmasını sağlar-->
+                            <div class="col-md-4">
+                                <div class="genre-card electro-pop">Electro Pop</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="genre-card dance-beat">Dance Beat</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="genre-card clubhouse-remix">Clubhouse Remix</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="genre-card hip-hop-rap">Hip Hop Rap</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="genre-card alternative-indie">Alternative Indie</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="genre-card classical-period">Classical Period</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <dliv class="col-md-4">
+                    <!--items sınıfıyla bu alanda bulunan bütün itemlere eriştik -->
+                    <div class="items">
+                        <!-- Taylor Swift -->
+                        <h6 style="color: white; padding:10px ;">Playlist</h6>
+                        <!--bootstrap özelliklerini hazır alıp kullandık yatayda ve dikeyde ortada hizalar-->
+                        <div class="item d-flex align-items-center">
+                            <p style="padding: 10px; color: #919191;">01</p>
+                            <img src="{{ url_for('static', filename='assets/taylorSwift.jpg') }}" alt="Taylor Swift" style="width: 50px; height: 50px;">
+                            <div class="details ms-3" style="flex-grow: 1;">
+                                <h6 style="font-size: 0.8em;">Blank Space</h6>
+                                <p style="font-size: 0.7em; color: #919191">Taylor Swift</p>
+                            </div>
+                            <div class="actions d-flex justify-content-center align-items-center">
+                                <button class="play-button">
+                                    <i class='bx bxs-right-arrow'></i>
+                                </button>
+                                <i class='bx bxs-plus-square'></i>
+                                <audio id="audio-player" src="{{ url_for('static', filename='mp3/BlankSpace.mp3') }}"></audio>
+                            </div>
+                        </div>
+                        <!-- Harry Styles -->
+                        <div class="item d-flex align-items-center">
+                            <p style="padding: 10px; color: #919191;">02</p>
+                            <img src="{{ url_for('static', filename='assets/harryStylesjpg.jpg') }}" alt="Harry Styles" style="width: 50px; height: 50px;">
+                            <div class="details ms-3" style="flex-grow: 1;">
+                                <h6 style="font-size: 0.8em;">As It Was</h6>
+                                <p style="font-size: 0.7em; color: #919191">Harry Styles</p>
+                            </div>
+                            <div class="actions d-flex justify-content-center align-items-center">
+                                <button class="play-button">
+                                    <i class='bx bxs-right-arrow'></i>
+                                </button>
+                                <i class='bx bxs-plus-square'></i>
+                                <audio id="audio-player" src="{{ url_for('static', filename='mp3/AsItWas.mp3') }}"></audio>
+                            </div>
+                        </div>
+                        <!-- Selena Gomez -->
+                        <div class="item d-flex align-items-center">
+                            <p style="padding: 10px; color: #919191;">03</p>
+                            <img src="{{ url_for('static', filename='assets/selenaGomez.jpg') }}" alt="Selena Gomez" style="width: 50px; height: 50px;">
+                            <div class="details ms-3" style="flex-grow: 1;">
+                                <h6 style="font-size: 0.8em;">People You Know</h6>
+                                <p style="font-size: 0.7em; color: #919191">Selena Gomez</p>
+                            </div>
+                            <div class="actions d-flex justify-content-center align-items-center">
+                                <button class="play-button">
+                                    <i class='bx bxs-right-arrow'></i>
+                                </button>
+                                <i class='bx bxs-plus-square'></i>
+                                <audio id="audio-player" src="{{ url_for('static', filename='mp3/PeopleYouKnow.mp3') }}"></audio>
+                            </div>
+                        </div>
+                        <!-- Çağan Şengül  -->
+                        <div class="item d-flex align-items-center">
+                            <p style="padding: 10px; color: #919191;">04</p>
+                            <img src="{{ url_for('static', filename='assets/caganSengul.jpg') }}" alt="Çağan Şengül" style="width: 50px; height: 50px;">
+                            <div class="details ms-3" style="flex-grow: 1;">
+                                <h6 style="font-size: 0.8em;">Yansın</h6>
+                                <p style="font-size: 0.7em; color: #919191">Çağan Şengül, Emre Aydın</p>
+                            </div>
+                            <div class="actions d-flex justify-content-center align-items-center">
+                                <button class="play-button">
+                                    <i class='bx bxs-right-arrow'></i>
+                                </button>
+                                <i class='bx bxs-plus-square'></i>
+                                <audio id="audio-player" src="{{ url_for('static', filename='mp3/Yansın.mp3') }}"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </dliv>
+                <div class="col-md-4">
+                    <h6 style="color: white; padding: 10px;">Suggestions</h6>
+                    <div class="input-group mb-3">
+                        <input type="text" id="suggestion-box" placeholder="Write the music"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+
+                    </div>
+                    <button type="button" class="btn btn-danger recommend-button">Show Recommendation</button>
+
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100px; background: linear-gradient(#050505, #18181d); margin-top: 20px; overflow: auto; height: 220px; color: white;  ">
+                        <ul id="recommend-box" style="list-style-type: none; padding: 0; margin: 0;">
+                            <div class="item d-flex align-items-center">
+                                <p style="padding: 10px; color: #919191;">04</p>
+                                <img src="{{ url_for('static', filename='assets/caganSengul.jpg') }}" alt="Çağan Şengül" style="width: 50px; height: 50px;">
+                                <div class="details ms-3" style="flex-grow: 1;">
+                                    <h6 style="font-size: 0.8em;">Yansın</h6>
+                                    <p style="font-size: 0.7em; color: #919191">Çağan Şengül, Emre Aydın</p>
+                                </div>
+                                <div class="actions d-flex justify-content-center align-items-center">
+                                    <button class="play-button">
+                                        <i class='bx bxs-right-arrow'></i>
+                                    </button>
+                                    <i class='bx bxs-plus-square'></i>
+                                    <audio id="audio-player" src="{{ url_for('static', filename='mp3/Yansın.mp3') }}"></audio>
+                                </div>
+                            </div>
+                            
+                        
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Sayfanın altındaki müziği oynatma kısmının özellikleri-->
+            <div class="player">
+                <div class="item d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='assets/lanaDelRey.jpg') }}" alt="Lana Del Rey" style="width: 83px; height: 83px;">
+                    <div class="details ms-3" style="flex-grow: 1;">
+                        <div class="details ms-3 d-flex flex-column">
+                            <h6 style="font-size: 0.8em;">Summertime Sadness</h6>
+                            <p style="font-size: 0.7em; color: #919191;">Lana Del Rey</p>
+                        </div>
+                        <!--bootstrap özelliklerini kullanarak audio kısmının dikey ve yatay eksende ortada olmasını sağlıyor-->
+                        <div class="actions d-flex justify-content-center align-items-center">
+                            <audio controls src="{{ url_for('static', filename='mp3/SummertimeSadness.mp3') }}"></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="hello-button">HELLO</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.play-button').forEach(button => {
+                button.addEventListener('click', function () {
+                    const audio = this.nextElementSibling.nextElementSibling;
+
+                    if (audio.paused) {
+                        audio.play();
+                        this.innerHTML = "<i class='bx bx-pause-circle icon-large'></i>";
+                    } else {
+                        audio.pause();
+                        this.innerHTML = "<i class='bx bxs-right-arrow'></i>";
+                    }
+                });
+            });
+            
+            const hellobutton = document.querySelector('.recommend-button')
+            hellobutton.addEventListener('click',function()
+            {
+                console.log('SENDIN')
+
+                const dataToSend = document.getElementById('suggestion-box').value
+
+                fetch('/send_data', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dataToSend)
+                })
+
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+                
+                //----------------------------------------------------------------------
+                fetch('/get_data', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const recUL = document.getElementById('recommend-box');
+                    recUL.innerHTML = "";
+                    console.log(data[0]);
+                    data.forEach(function(element){
+                    const newElement = 
+                        "<div class='item d-flex align-items-center'> " + 
+                        "<img src='{{ url_for('static', filename='assets/nota.png') }}' alt='Çağan Şengül' style='width: 50px; height: 50px;'>" + 
+                        "<div class='details ms-3' style='flex-grow: 1;'>" + 
+                            "<h6 style='font-size: 0.8em;'>"+element+"</h6>" + 
+                            "<p style='font-size: 0.7em; color: #919191'>Singer</p>" +
+                        "</div>"
+
+                    recUL.innerHTML += newElement;
+                        });                 
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            });
+
+            })
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
