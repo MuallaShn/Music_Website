@@ -11,7 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--Boxicons ikon setini sayfaya dahil eder. -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!--Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+    <!--Flask frameworkü kullanarak bir web uygulamasında css,js veya resim gibi dosyaların  URL'lerini dinamik olarak oluşturmak için kullanılır-->
 </head>
 
 <!--Navbar kısmında bootstrap kullandım-->
@@ -162,7 +162,7 @@
                         <!--bootstrap özelliklerini hazır alıp kullandık yatayda ve dikeyde ortada hizalar-->
                         <div class="item d-flex align-items-center">
                             <p style="padding: 10px; color: #919191;">01</p>
-                            <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                           <!--Flask frameworkü kullanarak bir web uygulamasında css,js veya resim gibi dosyaların  URL'lerini dinamik olarak oluşturmak için kullanılır-->
                             <img src="{{ url_for('static', filename='assets/taylorSwift.jpg') }}" alt="Taylor Swift"
                                 style="width: 50px; height: 50px;">
 
@@ -202,7 +202,7 @@
                         <!-- Selena Gomez -->
                         <div class="item d-flex align-items-center">
                             <p style="padding: 10px; color: #919191;">03</p>
-                            <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                            <!--Flask frameworkü kullanarak bir web uygulamasında css,js veya resim gibi dosyaların  URL'lerini dinamik olarak oluşturmak için kullanılır-->
                             <img src="{{ url_for('static', filename='assets/selenaGomez.jpg') }}" alt="Selena Gomez"
                                 style="width: 50px; height: 50px;">
                             <div class="details ms-3" style="flex-grow: 1;">
@@ -214,7 +214,7 @@
                                     <i class='bx bxs-right-arrow'></i>
                                 </button>
                                 <i class='bx bxs-plus-square'></i>
-                                <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                                <!--Flask frameworkü kullanarak bir web uygulamasında css,js veya resim gibi dosyaların  URL'lerini dinamik olarak oluşturmak için kullanılır-->
                                 <audio id="audio-player"
                                     src="{{ url_for('static', filename='mp3/PeopleYouKnow.mp3') }}"></audio>
                             </div>
@@ -234,7 +234,7 @@
                                     <i class='bx bxs-right-arrow'></i>
                                 </button>
                                 <i class='bx bxs-plus-square'></i>
-                                <!-- Flask frameworkü kullanarak bir web uygulamasında statik dosyaların URL'lerini dinamik olarak oluşturmak için kullanılır-->
+                                <!--Flask frameworkü kullanarak bir web uygulamasında css,js veya resim gibi dosyaların  URL'lerini dinamik olarak oluşturmak için kullanılır-->
                                 <audio id="audio-player"
                                     src="{{ url_for('static', filename='mp3/Yansın.mp3') }}"></audio>
                             </div>
@@ -243,7 +243,7 @@
                 </dliv>
                 <div class="col-md-4">
                     <h6 style="color: white; padding: 10px;">Suggestions</h6>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" >
                         <input type="text" id="suggestion-box" placeholder="Write the music"
                             aria-label="Recipient's username" aria-describedby="basic-addon2">
 
@@ -314,13 +314,13 @@
                     }
                 });
             });
-
+         //Burada flask da veri gönderme işlemi yapıyoruz yazılan şarkıya göre recommed butonunu çalıştırır.
             const hellobutton = document.querySelector('.recommend-button')
             hellobutton.addEventListener('click', function () {
                 console.log('SENDIN')
 
                 const dataToSend = document.getElementById('suggestion-box').value
-
+                //Burada jSON verileri almak için fetch leme yapıyoruz. 
                 fetch('/send_data', {
                     method: 'POST',
                     headers: {
@@ -328,7 +328,7 @@
                     },
                     body: JSON.stringify(dataToSend)
                 })
-
+                    //burada cevap oluşturmak için then ve catch blokalrını kullanıyoruz herhangi bir problem olması durumunda biiz catch bloğuna yönlendirecektir.
                     .then(response => response.json())
                     .then(data => {
                         console.log('Success:', data);
@@ -338,6 +338,7 @@
                     });
 
                 //----------------------------------------------------------------------
+            //veri alma işleminin gerçekleştiği yer 
                 fetch('/get_data', {
                     method: 'POST',
                     headers: {

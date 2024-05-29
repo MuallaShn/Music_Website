@@ -21,17 +21,20 @@ def send_data():
 
     global reco_data
     reco_data = data_toreceive  #Alınan JSON verisi reco_data global değişkenine atanır.
+    #Bu satır JSON formatında bir veri dödürür.Yanıt, işleminin başarılı olduğunu belirten bir status anahtarını ve alınan veriyi içeren bir bir data_received anahtarına sahiptir.
     return jsonify({'status': 'success', 'data_received': data_toreceive})
 
 
+#Flask web framework 'ü kullanarak bir web uygulamasını /get_data ismli bir endpoitn tanımlamaktadır.
+#Bu endpoint,POST isteğini aldığında önceden depolamış olan reco_data verisini kullanarak öneri verilerini oluşturur. ve bu verileri JSON formatı döner.
 
-@app.route('/get_data', methods=['POST'])
+@app.route('/get_data', methods=['POST'])#sadec POST isteklerini kabul eder
 def get_data():
     global reco_data #burada veri depolamak için reco_data tanımladık   
     try:
         data_toget = recommend.recommendation(reco_data) # recommend.recommendation(reco_data) ifadesi çağrılarak, reco_data kullanılarak öneri verileri alınır ve data_toget değişkenine atanır
     except Exception as e:
-        data_toget = ["No Song :("]
+        data_toget = ["No Song :("]#burada dataset inde şarkı bulunmadığı zaman no song olarak dönüş yapar
     return jsonify(data_toget) # değişkeni JSON formatına dönüştürülür ve POST isteği yapan tarafa geri gönderilir.
 
 
