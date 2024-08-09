@@ -2,5 +2,5 @@ A website that allows users to listen to music and suggests similar music based 
 
 
 <video width="20%" height="20%" controls>
-  <source src="https://github.com/MuallaShn/Music_Website/blob/main/video.mkv" type="video/mkv">
+  <source src="https://github.com/MuallaShn/Music_Website/blob/kadir-esra-mualla/video.mkv" type="video/mkv">
 </video>
