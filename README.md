@@ -1,5 +1,5 @@
 # Balfy Introduction
-This project is a web platform that allows users to listen to their favorite songs and discover similar music based on the songs they listen to. The system searches music databases using song titles to identify recommended songs and presents the results to the user. The goal is to provide a personalized music experience by understanding users' musical tastes.
+This project is a web platform that allows users to listen to their favorite songs and discover similar music based on the songs they listen to. The system pulls data in JSON format from various data sets using song titles to identify recommended songs and presents these results to the user. Instead of a traditional database, the system depends on external data sets, providing a lightweight and scalable architecture.
 
 ## The Technologies We Use
 
