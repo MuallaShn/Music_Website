@@ -1,4 +1,5 @@
- A website that allows users to listen to music and suggests similar music based on the name of the song they are listening to.
+# Balfy Introduction
+This project is a web platform that allows users to listen to their favorite songs and discover similar music based on the songs they listen to. The system searches music databases using song titles to identify recommended songs and presents the results to the user. The goal is to provide a personalized music experience by understanding users' musical tastes.
 
 ## The Technologies We Use
 
