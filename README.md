@@ -12,5 +12,12 @@
 - Python
 - Flask
 
+## Contributors✨
+
+<a href="https://github.com/Esra469/Music_Website/graphs/contributors">
+     <img src="https://contrib.rocks/image?repo=Esra469/Music_Website" />
+</a>
+
+
 https://github.com/user-attachments/assets/02e26a6d-4633-47f0-b3d0-0583e98b8b16
 
