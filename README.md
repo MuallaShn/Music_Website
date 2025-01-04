@@ -18,6 +18,14 @@
      <img src="https://contrib.rocks/image?repo=Esra469/Music_Website" />
 </a>
 
+---
+
+## Contact us
+- 🔗 [Mualla Şahin](https://www.linkedin.com/in/muallashn11/)
+- 🔗 [Esra Çimen](https://www.linkedin.com/in/esra-%C3%A7imen-a49173253/)
+- 🔗 [Abdulkadir Ustasaraç](https://www.linkedin.com/in/abdulkadir-ustasarac/)
+
+
 
 https://github.com/user-attachments/assets/02e26a6d-4633-47f0-b3d0-0583e98b8b16
 
